@@ -1,0 +1,25 @@
+<h1>Listing ewos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ewos.each do |ewo| %>
+      <tr>
+        <td><%= link_to 'Show', ewo %></td>
+        <td><%= link_to 'Edit', edit_ewo_path(ewo) %></td>
+        <td><%= link_to 'Destroy', ewo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ewo', new_ewo_path %>
